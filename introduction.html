@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hands ON | Battery Status JS Example</title>
+</head>
+<body>
+    <h1>Battery status</h1>
+    <h3>Simple JS Example</h3>
+    <script>
+        batteryCharge = 70  //%
+        chargePercentInMinutes = 10   //1% ~ 10 min
+        etWorkInMinues = batteryCharge * chargePercentInMinutes
+        etWorkInHours = etWorkInMinues / 60 
+        //display functions :
+        alert("remainig time(minutes)" + etWorkInMinues) 
+        alert("remaining time(hours)" + etWorkInHours)
+    </script>
+</body>
+</html>
