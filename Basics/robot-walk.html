@@ -46,11 +46,11 @@
 
     <div id="controls">
         <div>
-            <button class="btn btn-secondary" onclick="up-=10 , up > 0 ? up = 0: null , box.innerHTML = `<div class='robot' style='transform: translateX(${right}px , ${left}px) translateY(${down}px , ${up}px)'></div>` "><i class="bi bi-caret-up-fill"></i></button>
+            <button class="btn btn-secondary" onclick="up-=10 , up < 0 ? up = 0: null , box.innerHTML = `<div class='robot' style='transform: translateY(${up}px) translateX(${left}px)'></div>` "><i class="bi bi-caret-up-fill"></i></button>
         </div>
 
         <div>
-            <button class="btn btn-secondary" onclick="left-=10 , left > 0 ? left = 0: null , box.innerHTML = `<div class='robot' style='transform: translateX(${right}px , ${left}px) translateY(${down}px)'></div>` ">
+            <button class="btn btn-secondary" onclick="left-=10 , left < 0 ? left = 0: null , box.innerHTML = `<div class='robot' style='transform: translateX(${left}px) translateY(${up}px)'></div>` ">
                 <i class="bi bi-caret-left-fill"></i>
             </button>
 
