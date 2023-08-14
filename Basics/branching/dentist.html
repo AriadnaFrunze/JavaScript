@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let cost = 0
+        const discount = 20 // %
+
+        let serviceOneSelected = confirm("1. Teeth whitening?")
+        if (serviceOneSelected) {
+            cost += 500
+        }
+
+        let serviceTwoSelected = confirm("2. Tooth correction")
+        if (serviceTwoSelected) {
+                cost += 1500
+        }
+
+        let serviceThreeSelected = confirm("2. Tooth extraction")
+        if (serviceThreeSelected) {
+                cost += 1000
+        }
+
+        if(cost > 2000) {
+            alert(
+                "Total cost " + cost + "\n" +
+                "Discount% " + discount + "\n" +
+                "Cost with discount " + (100 - discount) * cost / 100
+            )
+        }
+        else{
+            alert(
+                "Total cost " + cost + "\n" 
+            )
+        }
+
+
+    </script>
+
+</body>
+</html>
