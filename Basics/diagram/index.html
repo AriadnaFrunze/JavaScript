@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS Carousel</title>
+</head>
+<body>
+    
+    <section>
+        <header>
+            <h1>Breaking News</h1>
+            <ul>
+                <li id="i1">
+                    <article>
+                        <h2>News title 1</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse adipisci dolores exercitationem cum quisquam? Tempora, illum et dolor, nostrum fugit cumque ipsam modi sit deserunt ipsa exercitationem iure. Ipsam, hic!</p>
+                    </article>
+                </li>
+                <li id="i2">
+                    <article>
+                        <h2>News title 2</h2>
+                        <p>Magnam quos reiciendis expedita, distinctio quo officiis deleniti neque, beatae sint nobis numquam doloribus asperiores repellendus. Ea, soluta temporibus? Neque tenetur repellat quam saepe corrupti fuga delectus, odit dolor fugiat!</p>
+                    </article>
+                </li>
+                <li id="i3" style="display:none;">
+                    <article>
+                        <h2>News title 3</h2>
+                        <p>Repellendus eveniet eaque consequatur laboriosam provident velit? Recusandae ab quidem dicta vitae cum voluptatum necessitatibus, mollitia animi temporibus repudiandae! Eveniet ipsum sapiente eos distinctio quisquam ducimus excepturi totam aliquid asperiores.</p>
+                    </article>
+                </li>
+                <li id="i4" style="display:none;">
+                    <article>
+                        <h2>News title 4</h2>
+                        <p>Totam quibusdam nihil hic voluptate, molestiae mollitia, magnam architecto sint exercitationem optio eius. Necessitatibus maiores accusamus blanditiis est repellendus error illum et accusantium nihil, eveniet quos vero similique ex facere!</p>
+                    </article>
+                </li>
+                <li id="i5" style="display:none;">
+                    <article>
+                        <h2>News title 5</h2>
+                        <p>Dignissimos aspernatur non nesciunt vero ducimus quidem mollitia laborum. Facere, cumque accusantium labore non iste maxime veritatis a sunt sint in inventore eaque. Saepe voluptas sequi nesciunt omnis, est nobis?</p>
+                    </article>
+                </li>
+                <li id="i6" style="display:none;">
+                    <article>
+                        <h2>News title 6</h2>
+                        <p>Nulla sit est alias quam, culpa delectus, sed iure amet tempora quis nesciunt. Fugiat expedita aliquam veniam voluptate necessitatibus molestiae accusamus ratione voluptates tenetur incidunt delectus, eius sapiente illum sequi!</p>
+                    </article>
+                </li>
+                <li id="i7" style="display:none;">
+                    <article>
+                        <h2>News title 7</h2>
+                        <p>Corrupti adipisci sit doloribus et ratione! Fugiat explicabo dignissimos earum, nesciunt eligendi aliquam, autem libero vel at doloremque illum doloribus natus deserunt quo tempora dolore tenetur eius ipsam maiores quae.</p>
+                    </article>
+                </li>
+                <li id="i8" style="display:none;">
+                    <article>
+                        <h2>News title 8</h2>
+                        <p>Corrupti adipisci sit doloribus et ratione! Fugiat explicabo dignissimos earum, nesciunt eligendi aliquam, autem libero vel at doloremque illum doloribus natus deserunt quo tempora dolore tenetur eius ipsam maiores quae.</p>
+                    </article>
+                </li>
+            </ul>
+        </header>
+        <footer style="text-align:right;">
+            <button onclick="prev()">&lt;</button>
+            <button onclick="Page1()">1</button>
+            <button onclick="Page2()">2</button>
+            <button onclick="Page3()">3</button>
+            <button onclick="Page4()">4</button>
+            <button onclick="next()">&gt;</button>
+        </footer>
+    </section>
+
+    <script>
+
+        let page = 1
+
+        function Page1 () {
+            page = 1
+            showPage()
+        }
+        function Page2 () {
+            page = 2
+            showPage()
+        }
+        function Page3 () {
+            page = 3
+            showPage()
+        }
+        function Page4 () {
+            page = 4
+            showPage()
+        }
+
+        function prev() {
+            page--
+            if (page < 1) {
+                page = 4
+            }
+            showPage()
+        }
+
+        function next() {
+            // alert("next")
+            page++
+             
+            if (page > 4) {
+                page = 1
+            }
+            showPage()
+        }
+
+
+        function showPage () {
+            if (page == 1) {
+                hideAll()
+                i1.style.display = 'block'
+                i2.style.display = 'block'
+            }
+            if (page == 2) {
+                hideAll()
+                i3.style.display = 'block'
+                i4.style.display = 'block'
+            }
+            if (page == 3) {
+                hideAll()
+                i5.style.display = 'block'
+                i6.style.display = 'block'
+            }
+            if (page == 4) {
+                hideAll()
+                i7.style.display = 'block'
+                i8.style.display = 'block'
+            }
+        }
+        function hideAll() {
+            i1.style.display = 'none'
+            i2.style.display = 'none'
+            i3.style.display = 'none'
+            i4.style.display = 'none'
+            i5.style.display = 'none'
+            i6.style.display = 'none'
+            i7.style.display = 'none'
+            i8.style.display = 'none'
+        }
+    </script>
+
+</body>
+</html>

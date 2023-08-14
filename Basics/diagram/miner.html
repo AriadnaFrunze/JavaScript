@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINER GAME</title>
+    <style>
+        body {
+            background-color: #222;
+        }
+        .map {
+            width: 497px;
+            height: 497px;
+            border: 5px solid #666;
+        }
+        .map > div {
+            width: 48px;
+            height: 48px;
+            border: 1px solid #555;
+            float: left;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="map">
+        <!-- row 1 -->
+        <div id="sq1x1"></div>
+        <div id="sq1x2"></div>
+        <div id="sq1x3"></div>
+        <div id="sq1x4"></div>
+        <div id="sq1x5"></div>
+        <div id="sq1x6"></div>
+        <div id="sq1x7"></div>
+        <div id="sq1x8"></div>
+        <div id="sq1x9"></div>
+        <div id="sq1x10"></div>
+
+        <!-- row 2 -->
+        <div id="sq2x1"></div>
+        <div id="sq2x2"></div>
+        <div id="sq2x3"></div>
+        <div id="sq2x4"></div>
+        <div id="sq2x5"></div>
+        <div id="sq2x6"></div>
+        <div id="sq2x7"></div>
+        <div id="sq2x8"></div>
+        <div id="sq2x9"></div>
+        <div id="sq2x10"></div>
+
+        <!-- row 3 -->
+        <div id="sq3x1"></div>
+        <div id="sq3x2"></div>
+        <div id="sq3x3"></div>
+        <div id="sq3x4"></div>
+        <div id="sq3x5"></div>
+        <div id="sq3x6"></div>
+        <div id="sq3x7"></div>
+        <div id="sq3x8"></div>
+        <div id="sq3x9"></div>
+        <div id="sq3x10"></div>
+
+        <!-- row 4 -->
+        <div id="sq4x1"></div>
+        <div id="sq4x2"></div>
+        <div id="sq4x3"></div>
+        <div id="sq4x4"></div>
+        <div id="sq4x5"></div>
+        <div id="sq4x6"></div>
+        <div id="sq4x7"></div>
+        <div id="sq4x8"></div>
+        <div id="sq4x9"></div>
+        <div id="sq4x10"></div>
+
+        <!-- row 5 -->
+        <div id="sq5x1"></div>
+        <div id="sq5x2"></div>
+        <div id="sq5x3"></div>
+        <div id="sq5x4"></div>
+        <div id="sq5x5"></div>
+        <div id="sq5x6"></div>
+        <div id="sq5x7"></div>
+        <div id="sq5x8"></div>
+        <div id="sq5x9"></div>
+        <div id="sq5x10"></div>
+
+        <!-- row 6 -->
+        <div id="sq6x1"></div>
+        <div id="sq6x2"></div>
+        <div id="sq6x3"></div>
+        <div id="sq6x4"></div>
+        <div id="sq6x5"></div>
+        <div id="sq6x6"></div>
+        <div id="sq6x7"></div>
+        <div id="sq6x8"></div>
+        <div id="sq6x9"></div>
+        <div id="sq6x10"></div>
+
+        <!-- row 7 -->
+        <div id="sq7x1"></div>
+        <div id="sq7x2"></div>
+        <div id="sq7x3"></div>
+        <div id="sq7x4"></div>
+        <div id="sq7x5"></div>
+        <div id="sq7x6"></div>
+        <div id="sq7x7"></div>
+        <div id="sq7x8"></div>
+        <div id="sq7x9"></div>
+        <div id="sq7x10"></div>
+        
+        <!-- row 8 -->
+        <div id="sq8x1"></div>
+        <div id="sq8x2"></div>
+        <div id="sq8x3"></div>
+        <div id="sq8x4"></div>
+        <div id="sq8x5"></div>
+        <div id="sq8x6"></div>
+        <div id="sq8x7"></div>
+        <div id="sq8x8"></div>
+        <div id="sq8x9"></div>
+        <div id="sq8x10"></div>
+        
+        <!-- row 9 -->
+        <div id="sq9x1"></div>
+        <div id="sq9x2"></div>
+        <div id="sq9x3"></div>
+        <div id="sq9x4"></div>
+        <div id="sq9x5"></div>
+        <div id="sq9x6"></div>
+        <div id="sq9x7"></div>
+        <div id="sq9x8"></div>
+        <div id="sq9x9"></div>
+        <div id="sq9x10"></div>
+
+        <!-- row 10 -->
+        <div id="sq10x1"></div>
+        <div id="sq10x2"></div>
+        <div id="sq10x3"></div>
+        <div id="sq10x4"></div>
+        <div id="sq10x5"></div>
+        <div id="sq10x6"></div>
+        <div id="sq10x7"></div>
+        <div id="sq10x8"></div>
+        <div id="sq10x9"></div>
+        <div id="sq10x10"></div>
+    </div>
+    <div class="controls">
+        <button onclick="moveRight()">&gt;</button>
+    </div>
+    
+
+
+    <script>
+        let row = 1
+        let col = 1
+    function update() {
+        let id = "sq" + row + "x" + col
+
+        let div = window[id]
+        div.style.backgroundImage = 'url(Mario.png)'
+
+    }
+    function clear() {
+        let id = "sq" + row + "x" + col
+
+        let div = window[id]
+        div.style.backgroundImage = ''
+
+    }
+        
+    function moveRight() {
+        clear()
+        col++
+        update()
+    }
+
+
+
+    update()
+    </script>
+</body>
+</html>
