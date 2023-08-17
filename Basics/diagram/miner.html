@@ -20,6 +20,14 @@
             float: left;
             background-size: contain;
         }
+        .map [id^="sq1x"] {
+            background-image: url(soil.png);
+        }
+        .map :not([id^="sq1x"]) {
+            background-image: url(soil.png);
+            background-size: 100% 145%;
+            background-position: bottom;
+        }
     </style>
 </head>
 <body>
@@ -146,7 +154,16 @@
         <div id="sq10x10"></div>
     </div>
     <div class="controls">
-        <button onclick="moveRight()">&gt;</button>
+        <div>
+            <button onclick="moveUp()">▲</button>
+        </div>
+        <div>
+            <button onclick="moveLeft()">◀</button>
+            <button onclick="moveRight()">▶</button>
+        </div>
+        <div>
+            <button onclick="moveDown()">▼</button>
+        </div>
     </div>
     
 
@@ -154,27 +171,79 @@
     <script>
         let row = 1
         let col = 1
+
+        let gRow = Math.round( Math.random() * 9 +1)
+        let gCol = Math.round(Math.random() * 9 + 1)
+        let gId = "sq" + gRow + "x" + gCol
+        let gDiv = window[gId]
+        gDiv.style.backgroundImage = 'url(treasure.png)'
+        gDiv.style.backgroundSize = 'contain'
+
+
     function update() {
         let id = "sq" + row + "x" + col
 
         let div = window[id]
         div.style.backgroundImage = 'url(Mario.png)'
+        div.style.backgroundSize = 'contain'
 
     }
     function clear() {
         let id = "sq" + row + "x" + col
 
         let div = window[id]
-        div.style.backgroundImage = ''
+        div.style.backgroundImage = 'none'
+        div.style.backgroundColor = '#000'
 
     }
         
     function moveRight() {
-        clear()
-        col++
-        update()
+        if(col < 10) { 
+            clear()
+            col++
+            update()
+        }
+        if(row == gRow && col == gCol){
+            alert("you have found a treasure!")
+        }
+    }
+    function moveLeft() {
+        if(col > 1) { 
+            clear()
+            col--
+            update()
+        }
+        if(row == gRow && col == gCol){
+            alert("you have found a treasure!")
+        }
+    }
+    function moveDown() {
+        if(row < 10) { 
+            clear()
+            row++
+            update()
+        }
+        if(row == gRow && col == gCol){
+            alert("you have found a treasure!")
+        }
+    }
+    function moveUp() {
+        if(row > 1) { 
+            clear()
+            row--
+            update()
+        }
+        if(row == gRow && col == gCol){
+            alert("you have found a treasure!")
+        }
     }
 
+
+
+    update()
+    </script>
+</body>
+</html>
 
 
     update()
