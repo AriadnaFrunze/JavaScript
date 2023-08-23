@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest</title>
+</head>
+<body>
+    <div id="forest">
+
+    </div>
+
+    <script src="icons.js"></script>
+    <script>
+        function addTree(number , color) {
+            if(number == 1){
+                forest.innerHTML += svg_1.replace('???', `style="fill:${color}"`)
+            }
+            if(number == 2){
+                forest.innerHTML += svg_2.replace('???', `style="fill:${color}"`)
+            }
+            if(number == 3){
+                forest.innerHTML += svg_3.replace('???', `style="fill:${color}"`)
+            }
+        }
+        // for(let t = 1; t<= 10; t++) {
+        //     addTree()
+        // }
+    </script>
+
+</body>
+</html>
