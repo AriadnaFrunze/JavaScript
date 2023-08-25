@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forest</title>
+    <style>
+        body {
+            background-color: #112;
+        }
+        #forest {
+            border: 1px solid white;
+            position: relative;
+            width: 600px;
+            height: 600px;
+        }
+        .tree {
+            position: absolute;
+        }
+    </style>
 </head>
 <body>
     <div id="forest">
@@ -12,20 +26,32 @@
 
     <script src="icons.js"></script>
     <script>
-        function addTree(number , color) {
+        function addTree(number , color , left , bottom , scale) {
             if(number == 1){
-                forest.innerHTML += svg_1.replace('???', `style="fill:${color}"`)
+                forest.innerHTML +=
+                `<div class="tree" style="left: ${left}px; bottom: ${bottom}px; transform: scale(${scale})">`+
+                    svg_1.replace('???', `style="fill:${color}"`)+
+                `</div>`
             }
             if(number == 2){
-                forest.innerHTML += svg_2.replace('???', `style="fill:${color}"`)
+                `<div class="tree" style="left: ${left}px; bottom: ${bottom}px; transform: scale(${scale})">`+
+                    svg_2.replace('???', `style="fill:${color}"`)+
+                `</div>`
             }
             if(number == 3){
-                forest.innerHTML += svg_3.replace('???', `style="fill:${color}"`)
+                `<div class="tree" style="left: ${left}px; bottom: ${bottom}px; transform: scale(${scale})">`+
+                    svg_3.replace('???', `style="fill:${color}"`)+
+                `</div>`
             }
         }
-        // for(let t = 1; t<= 10; t++) {
-        //     addTree()
-        // }
+
+        //////////////////////////////////////////////////////
+        for(let layer = 10; layer>= 1; layer--) {
+
+            for(let n = 1; n <= 10; n++) {
+                addTree(Math.round(1 + Math.random() * 2),`rgba(0, ${255-layer * 20 + Math.random() * 20}, 0)`,Math.random() * 500,layer * 20,1/layer)
+            }
+        }
     </script>
 
 </body>
