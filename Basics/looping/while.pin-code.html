@@ -15,8 +15,6 @@
         while(true) {
             pin = prompt('Enter PIN :')
 
-            tries++
-
             if(pin == PIN ) {
                 alert(`
                 Acces Granted!!!\n\n
@@ -37,13 +35,13 @@
                     alert(`
                     succes!!!\n\n
                     your balance: ${balance}MDL
-                    `)
-                    
+                    `)   
                 }
                 break
             }
             else {
                 alert("Wrong PIN")
+                tries++
                 if (tries == 3){
                     alert("Card Blocked!!!")
                     break
