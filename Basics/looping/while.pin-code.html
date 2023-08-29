@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const PIN = "1234"
+        let pin = ""
+        let tries = 0
+        let balance = 100000.00
+    
+        while(true) {
+            pin = prompt('Enter PIN :')
+
+            tries++
+
+            if(pin == PIN ) {
+                alert(`
+                Acces Granted!!!\n\n
+                your balance : ${balance}MDL
+                `)
+
+                let money = prompt("Withdraw : ?")
+                if(money > balance) {
+                    alert("you don't have that much money!")
+                    break
+                }
+                let maxAmount = 50000.00
+                if (money > maxAmount) {
+                    alert("you can't extract that much")
+                }
+                else{
+                    balance -= money
+                    alert(`
+                    succes!!!\n\n
+                    your balance: ${balance}MDL
+                    `)
+                    
+                }
+                break
+            }
+            else {
+                alert("Wrong PIN")
+                if (tries == 3){
+                    alert("Card Blocked!!!")
+                    break
+                }
+            }
+           
+        }
+    </script>
+</body>
+</html>

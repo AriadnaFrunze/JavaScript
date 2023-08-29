@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: monospace;
+            line-height: 9px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let rx = 5
+        let ry = 5
+        let sx = 1
+        let sy = 4
+        for(let y = 1; y <= 10; y++){
+
+            for (let x = 1; x <= 10; x++) {
+                if(x == rx && y == ry){
+                    document.write(`R`)
+                }
+                else{
+                    if(x == sx && y == sy){
+                        document.write(`s`)
+                    }
+                    else{
+                        document.write(`.`)
+                    }
+                }
+                
+            }
+            document.write(`<br>`)
+        }
+    </script>
+</body>
+</html>
