@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let start = 1
+        let end = 5
+        let count = 0 
+        debugger
+
+        ////////// FOR ///////////////////////
+        // for (let step = start; step <= end; ) {
+            
+        //     if(step % 2 == 1) {
+        //         count++
+        //     }
+        // }
+        // console.log(`in [ ${start}...${end}] found ${count} odd numbers`)
+
+        ////////// WHILE //////////////////
+        let step = start 
+        while(step<= end){
+              if (step % 2 == 1) {
+               count++
+             }
+             step ++
+        }
+        console.log(`in [ ${start}...${end}] found ${count} odd numbers`)
+    </script>
+</body>
+</html>
