@@ -11,7 +11,7 @@
     <script>
         const foodNames  = [  'Pizza',     'Salad',     'Soup'  ]
         const foodPrices = [  100.00,       75.00,       15.25  ]
-        const foodImg    = [ pizza.jpg,   salad.jpg,   soup.jpg ] 
+        const foodImg    = [ "pizza.jpg",   "salad.jpg",   "soup.jpg" ] 
         let orderTotal = 0
 
         function renderMenu(){
@@ -20,7 +20,7 @@
                     html += `<tr>`
                         html += `<td>${foodNames[i]}</td>`
                         html += `<td>${foodPrices[i]}</td>`
-                        html += `<td><img src="${foodImg[i]}"></td>`
+                        html += `<td><img src="${foodImg[i]}" style="width:100px;"></td>`
                         html += `<td><button onclick="addItem(${i})">+ ADD</button></td>`
                     html += `</tr>`
                 }
