@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 1px solid black;
+        }
+        td {
+             border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table >
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Salary</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        <!-- <tr>
+            <td>John Doe</td>
+            <td>10000</td>
+            <td>
+                <button>^</button>
+                <button>#</button>
+                <button>v</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Marry Poppins</td>
+            <td>11000</td>
+            <td>
+                <button>^</button>
+                <button>#</button>
+                <button>v</button>
+            </td>
+        </tr> -->
+        </tbody>
+    </table>
+    <script>
+        let data = [
+            {
+                name: "John Doe",
+                salary: 10000
+            },
+            {
+                name: "Marry Poppins",
+                salary: 11000
+            },
+            {
+                name: "Peter Alan",
+                salary: 12000
+            }
+        ]
+        function render(){
+            tbody.innerHTML = ``
+            for(let i=0; i<data.length; i++){
+                tbody.innerHTML += `
+                    <tr>
+                        <td>${data[i].name}</td>
+                        <td>${data[i].salary}</td>
+                        <td>
+                            <button onclick="moveUp(${i})">^</button>
+                            <button onclick="edit(${i})">#</button>
+                            <button onclick="moveDown(${i})">v</button>
+                        </td>
+                    </tr>
+                `
+            }
+        }
+        function edit(index){
+           let newSalary = +prompt("enter new salary value")
+           data[index].salary = newSalary
+           render()
+        }
+        function moveUp(index){
+            if(index > 0){
+                let temp = data[index - 1]
+                data[index - 1] = data[index]
+                data[index] = temp
+                render()
+            }
+        }
+        function moveDown(index){
+            if(index < 2){
+                let temp = data[index + 1]
+                data[index + 1] = data[index]
+                data[index] = temp
+                render()
+            }
+        }
+        render()
+    </script>
+</body>
+</html>

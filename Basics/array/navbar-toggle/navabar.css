@@ -1,0 +1,17 @@
+body {
+    background-color: #223;
+    font-family: Arial;
+    margin: 0;
+}
+a {
+   text-decoration: none; 
+}
+#navbar {
+    background-color: #112;
+    padding: 1em;
+}
+#navbar a {
+    color: white;
+    font-style: 1.25em;
+    padding: .5em;
+}

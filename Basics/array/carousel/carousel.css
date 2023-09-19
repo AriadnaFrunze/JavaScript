@@ -1,0 +1,20 @@
+body {
+    background-color: #222;
+    color: white;
+    font-size: 50px;
+}
+#carousel {
+    border: 5px solid #555;
+    width: 900px;
+    height: 900px;
+    margin: auto;
+}
+#carousel h4 {
+    margin: 5px;
+}
+#carouselSlides {
+    border: 2px solid white;
+    width: 800px;
+    height: 600px;
+    margin: auto;
+}

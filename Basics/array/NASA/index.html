@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #container img {
+        width: 200px;
+       } 
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script src="photos.js"></script>
+    <script>
+        for(let index = 0; index < 6; index++){
+            let url = data.photos[index].img_src
+            container.innerHTML += `<img src="${url}"/>`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+    let btn = {
+        text: "Register",
+        color: "#345",
+        bgColor: "#eee",
+        padding:"10px"
+    }
+    let input = {
+        type: "text",
+        size: "50",
+        bgColor: "#eee",
+        padding: "10px"
+    }
+    let select = {
+        bgColor: "#eee",
+        font: "Arial",
+        size: "20px"
+    }
+    let options = ["opt1", "opt2", "opt3", "opt4"]
+    container.innerHTML += `<button style="color: ${btn.color}; backgroundcolor:${btn.bgColor}; padding:${btn.padding};">${btn.text}</button>`
+    container.innerHTML += `<input type="${input.type}" size="${input.size}" style="backgroundcolor:${input.bgColor}; padding:${input.padding};">`
+    container.innerHTML += `
+        <select style="backgroundcolor:${select.bgColor}; font-family:${input.font}; font-size: ${select.size};">
+            <option>${options[0]}</option>
+            <option>${options[1]}</option>
+            <option>${options[2]}</option>
+            <option>${options[3]}</option>
+        </select>`
+    </script>
+</body>
+</html>
